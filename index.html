@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PickFlix</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1 id="mainTitle">PickFlix</h1>
+    <h2 id="mainHeader">Welcome to the movie and series recommender</h2>
+  </header>
+  <main>
+    <div class="questionBox" id="entryContainer">
+      <label for="myText">Enter your name:</label>
+      <input type="text" id="myText">
+    </div>
+    <button type="button" id="startButton">Start</button>
+
+    <form id="filmOrTvShows" style="display: none;">
+      <h2>Movie or TV Series?</h2>
+      <input type="radio" name="filmOrTvShow" value="movie"> Movie
+      <input type="radio" name="filmOrTvShow" value="tv"> TV
+    </form>
+
+    <form id="movieForm" style="display: none;">
+      <p>Movies, nice choice! What genre(s) do you like?</p>
+      <div class="movieGenres">
+        <input type="checkbox" value="comedy"> Comedy
+        <input type="checkbox" value="horror"> Horror
+        <input type="checkbox" value="romance"> Romance
+        <input type="checkbox" value="action"> Action
+      </div>
+      <button type="button" id="submitMovieGenreButton">Submit</button>
+    </form>
+
+    <form id="tvForm" style="display: none;">
+      <p>Series it is, what genre(s) do you like?</p>
+      <div class="tvGenres">
+        <input type="checkbox" value="comedy"> Comedy
+        <input type="checkbox" value="documentary"> Documentary
+        <input type="checkbox" value="sci-fi"> Sci-Fi
+        <input type="checkbox" value="drama"> Drama
+        <input type="checkbox" value="reality"> Reality
+      </div>
+      <button type="button" id="submitTvGenreButton">Submit</button>
+    </form>
+
+    <div class="loading" id="loadingPage" style="display: none;">
+      <h2>Okay, finding you something to watch based on your preferences</h2>
+      <img id="rubiks" src="https://i.pinimg.com/originals/58/d2/fa/58d2fa05030ec858fd8e30158f59fd11.gif" alt="Rubik's cube">
+    </div>
+
+    <div class="resultBox" style="display: none;">
+      <h2 class="resultTitle"></h2>
+      <img class="resultImage" src="" alt="">
+    </div>
+
+    <div class="links" id="links" style="display: none;">
+      <h2>You can stream via one or more of the following sites:</h2>
+      <a href="https://www.Netflix.com">Netflix🍿</a> <br>
+      <a href="https://www.hulu.com/welcome">Hulu 📺</a> <br>
+      <a href="https://www.amazon.co.uk/video">Amazon Prime 🅰️</a> <br>
+      <a href="https://www.youtube.com">YouTube 📹</a> <br>
+    </div>
+    <button type="button" id="startOverButton" style="display: none;">Start again</button>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
